@@ -1,0 +1,13 @@
+h1 {
+    font-family: 'Inter';
+    text-align: center;    
+}
+a {
+    padding: 10px;
+    background: yellow;
+    margin: 10px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
