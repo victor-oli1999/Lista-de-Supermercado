@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Lista De Supermercado';
   Lista: Lista = {
     id: 1,
-    nome: 'Frango'
+    nome: 'Frango',
+    quantidade: 1
   }
 }

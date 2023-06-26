@@ -3,14 +3,22 @@ h2 {
     margin-top: 50px; 
     text-align: center;
 }
+table {
+    width: 50% !important;
+    margin: auto;
+}
 .listas {
     display: flex;
     justify-content: center;
 }
 .listas ul {
     list-style-type: none;
+    padding-inline-start: 0px;
 }
-.id{
+.listas ul li {
+    margin-bottom: 10px;
+}
+.quantidade {
     margin-right: 10px;
 }
 .button {
