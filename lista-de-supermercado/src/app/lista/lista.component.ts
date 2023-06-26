@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Lista } from '../Lista';
-
+import { LISTAGEM } from '../data-mock'
 
 @Component({
   selector: 'app-lista',
@@ -8,8 +8,7 @@ import { Lista } from '../Lista';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent {
-  Lista: Lista = {
-    id: 1,
-    name: 'Frango'
-  }
+  Lista = LISTAGEM;
+  
+  
 }

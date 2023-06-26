@@ -7,9 +7,9 @@ import { Lista } from './Lista';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lista-de-supermercado';
+  title = 'Lista De Supermercado';
   Lista: Lista = {
     id: 1,
-    name: 'Frango'
+    nome: 'Frango'
   }
 }

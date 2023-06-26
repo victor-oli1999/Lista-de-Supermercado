@@ -1,7 +1,20 @@
-<h2>Listagem</h2>
+<h2>Lista de compras</h2>
 
-<ul>
-    <li>
-        <span>{{Lista.name}}</span>
-    </li>
-</ul>
+<div class="listas">
+    <ul>
+        <li *ngFor="let Lista of Lista">
+            <button class="button"><span class="id">{{Lista.id}}</span>
+            <span class="nome">{{Lista.nome}}</span></button>
+        </li>
+    </ul>
+  <!--<label for="Item">Item: </label>
+  <input id="Item" #NomeItem />
+  <label for="Quantidade">Quantidade: </label>
+  <input id="Quantidade" #Quantidade />
+  <label for="Preco-Unidade">Preço Unidade: </label>
+  <input id="Preco-Unidade" #Preco-Unidade />-->
+  <!-- (click) passes input value to add() and then clears the input -->
+  <!--<button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add Item
+  </button>-->
+</div>
