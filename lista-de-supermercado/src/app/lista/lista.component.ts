@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Lista } from '../Lista';
 import { ListaService } from '../lista.service';
-import { LISTAGEM } from '../data-mock'
 import { MessageService } from '../message.service';
 
 @Component({
@@ -9,20 +8,22 @@ import { MessageService } from '../message.service';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent {
-
+export class ListaComponent implements OnInit {
+  selectedLista?: Lista;
   lista: Lista[] = [];
 
   constructor(private listaService: ListaService, private messageService: MessageService) { }
-  
   ngOnInit(): void {
     this.getListas();
   }
-  onSelect(lista: Lista): void {
-    this.messageService.add(`ListaComponent: Selected Lista id=${lista.id}`);
-  }
   getListas(): void {
     this.listaService.getLista()
-        .subscribe(lista => this.lista = lista);
+    .subscribe(lista => this.lista = lista);
   }
+  onSelect(lista: Lista): void {
+    this.selectedLista = lista;
+    this.messageService.add(`ListaComponent: Selected Lista id=${lista.id}`);
+  }
+  
+  
 }
