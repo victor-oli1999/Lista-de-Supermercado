@@ -18,7 +18,7 @@ table {
 .listas ul li {
     margin-bottom: 10px;
 }
-.quantidade {
+.id, .nome {
     margin-right: 10px;
 }
 .button {

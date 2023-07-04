@@ -49,4 +49,10 @@ export class ListaService {
       catchError(this.handleError<Lista>(`getLista id=${id}`))
     );
   }
+  addLista(lista: Lista): Observable<Lista> {
+    return this.http.post<Lista>(this.listaUrl, lista, this.httpOptions).pipe(
+      tap((novaLista: Lista) => this.log(`Adicionado lista com id=${novaLista.id}`)),
+      catchError(this.handleError<Lista>('addLista'))
+    )
+  }
 }

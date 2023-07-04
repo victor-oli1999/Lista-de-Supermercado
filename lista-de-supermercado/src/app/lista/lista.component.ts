@@ -24,6 +24,13 @@ export class ListaComponent implements OnInit {
     this.selectedLista = lista;
     this.messageService.add(`ListaComponent: Selected Lista id=${lista.id}`);
   }
-  
+  add(nome: string): void {
+    nome = nome.trim();
+    if (!nome) {return; }
+    this.listaService.addLista({ nome } as Lista)
+      .subscribe(lista => {
+        this.lista.push(lista);
+      })
+  }
   
 }
